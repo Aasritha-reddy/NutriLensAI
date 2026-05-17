@@ -1,0 +1,146 @@
+
+```text
+SUNRISE DIAGNOSTICS
+Comprehensive Health Checkup Report (Synthetic Data for Testing Only)
+
+Patient Details
+- Name         : Ananya Rao
+- Patient ID   : SDH-2026-01472
+- Age / Sex    : 42 Years / Female
+- Sample ID    : S-0093847
+- Referring Dr.: Self
+- Sample Date  : 10-May-2026 08:12
+- Report Date  : 10-May-2026 18:35
+
+------------------------------------------------------------
+1. COMPLETE BLOOD COUNT (CBC)
+------------------------------------------------------------
+Test                         Result      Units        Ref Range
+Hemoglobin                   11.8        g/dL         12.0 – 15.0
+Total Leukocyte Count        7.4         x10^3/µL     4.0 – 10.0
+RBC Count                    4.20        x10^6/µL     3.8 – 4.8
+Hematocrit (PCV)             36.5        %            36 – 46
+MCV                          86          fL           80 – 96
+MCH                          28.1        pg           27 – 32
+MCHC                         32.3        g/dL         31 – 35
+RDW-CV                       13.5        %            11.5 – 14.5
+Platelet Count               2.8         x10^5/µL     1.5 – 4.5
+
+Differential Leukocyte Count
+Neutrophils                  58          %            40 – 70
+Lymphocytes                  32          %            20 – 40
+Monocytes                    6           %            2 – 10
+Eosinophils                  3           %            1 – 6
+Basophils                    1           %            0 – 2
+
+------------------------------------------------------------
+2. FASTING BLOOD SUGAR
+------------------------------------------------------------
+Fasting Plasma Glucose       90         mg/dL        70 – 100
+
+------------------------------------------------------------
+3. POSTPRANDIAL BLOOD SUGAR (2 HRS)
+------------------------------------------------------------
+Postprandial Glucose         120         mg/dL        < 140
+
+------------------------------------------------------------
+4. HBA1c
+------------------------------------------------------------
+HbA1c                        5.0         %            4.0 – 5.6
+Estimated Avg Glucose        157         mg/dL        (Derived)
+
+------------------------------------------------------------
+5. LIPID PROFILE
+------------------------------------------------------------
+Total Cholesterol            218         mg/dL        < 200
+Triglycerides                210         mg/dL        < 150
+HDL Cholesterol              41          mg/dL        > 50 (F)
+LDL Cholesterol (calc.)      136         mg/dL        < 100
+VLDL (calc.)                 42          mg/dL        5 – 30
+Non-HDL Cholesterol          177         mg/dL        < 130
+TC / HDL Ratio               5.3                       < 4.5
+
+------------------------------------------------------------
+6. LIVER FUNCTION TESTS (LFT)
+------------------------------------------------------------
+Total Bilirubin              0.7         mg/dL        0.3 – 1.2
+Direct Bilirubin             0.2         mg/dL        0.0 – 0.3
+Indirect Bilirubin           0.5         mg/dL        0.2 – 0.9
+AST (SGOT)                   29          U/L          5 – 35
+ALT (SGPT)                   34          U/L          5 – 45
+Alkaline Phosphatase         92          U/L          44 – 147
+Total Protein                7.3         g/dL         6.0 – 8.3
+Albumin                      4.2         g/dL         3.4 – 5.0
+Globulin (calc.)             3.1         g/dL         2.3 – 3.5
+A/G Ratio                    1.4                       1.0 – 2.0
+
+------------------------------------------------------------
+7. RENAL FUNCTION TESTS (RFT)
+------------------------------------------------------------
+Blood Urea Nitrogen          19          mg/dL        7 – 20
+Serum Creatinine             1.08        mg/dL        0.6 – 1.1 (F)
+Uric Acid                    6.4         mg/dL        2.6 – 6.0 (F)
+eGFR (CKD-EPI)               68          mL/min/1.73m² > 90
+
+------------------------------------------------------------
+8. ELECTROLYTES
+------------------------------------------------------------
+Sodium                       139         mmol/L       135 – 145
+Potassium                    4.9         mmol/L       3.5 – 5.1
+Chloride                     102         mmol/L       98 – 107
+
+------------------------------------------------------------
+9. THYROID PROFILE
+------------------------------------------------------------
+TSH (3rd Gen)                2.36        µIU/mL       0.4 – 4.5
+Free T4                      1.10        ng/dL        0.8 – 1.8
+Free T3                      3.0         pg/mL        2.0 – 4.4
+
+------------------------------------------------------------
+10. URINE ROUTINE EXAMINATION
+------------------------------------------------------------
+Physical Examination
+Colour                       Pale Yellow
+Appearance                   Clear
+
+Chemical Examination
+pH                           6.0                      4.5 – 8.0
+Specific Gravity             1.015                   1.005 – 1.030
+Protein                      Negative
+Glucose                      Negative
+Ketones                      Negative
+Bilirubin                    Negative
+Urobilinogen                 Normal
+Nitrite                      Negative
+Leukocyte Esterase           Negative
+
+Microscopic Examination
+Pus Cells                    0–2          /HPF       0–5
+RBC                          0–1          /HPF       0–2
+Epithelial Cells             Few          /HPF       Few
+Casts                        Nil seen
+Crystals                     Nil seen
+Bacteria                     Nil seen
+
+------------------------------------------------------------
+11. VITAMINS & OTHERS
+------------------------------------------------------------
+Vitamin B12                  326         pg/mL        211 – 911
+25-OH Vitamin D              21          ng/mL        30 – 100
+Serum Calcium                9.1         mg/dL        8.5 – 10.5
+
+------------------------------------------------------------
+12. ANTHROPOMETRY & VITALS (AS PROVIDED)
+------------------------------------------------------------
+Height                       162         cm
+Weight                       74          kg
+BMI                          28.2        kg/m²        18.5 – 24.9
+Blood Pressure               146/92      mmHg         < 130/80
+Pulse Rate                   82          /min         60 – 100
+
+------------------------------------------------------------
+End of Report
+(This report contains synthetic values for software testing only)
+------------------------------------------------------------
+```
+
