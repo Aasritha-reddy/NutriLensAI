@@ -2,21 +2,21 @@ package com.nutrilens.nutrilensai.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-// Brand
-val NutriGreen        = Color(0xFF00C07F)
-val NutriGreenDark    = Color(0xFF009963)
-val NutriGreenLight   = Color(0xFFE8F9F3)
-val NutriGreenAccent  = Color(0xFF00E096)
+// Brand — Deep Indigo
+val NutriGreen        = Color(0xFF4F46E5)
+val NutriGreenDark    = Color(0xFF3730A3)
+val NutriGreenLight   = Color(0xFFEEF2FF)
+val NutriGreenAccent  = Color(0xFF6366F1)
 
 // Backgrounds & surfaces
-val NutriBackground   = Color(0xFFF5F7FA)
+val NutriBackground   = Color(0xFFF8FAFC)
 val NutriSurface      = Color(0xFFFFFFFF)
-val NutriDivider      = Color(0xFFF3F4F6)
+val NutriDivider      = Color(0xFFE2E8F0)
 
 // Text
-val NutriTextPrimary   = Color(0xFF1A1A2E)
-val NutriTextSecondary = Color(0xFF6B7280)
-val NutriTextHint      = Color(0xFFB0B7C3)
+val NutriTextPrimary   = Color(0xFF0F172A)
+val NutriTextSecondary = Color(0xFF64748B)
+val NutriTextHint      = Color(0xFFCBD5E1)
 
 // Verdict — Safe
 val NutriSafe       = Color(0xFF22C55E)

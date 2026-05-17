@@ -4,29 +4,14 @@ import android.app.Application
 import android.net.Uri
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.nutrilens.nutrilensai.repository.AnalysisResult
+import com.nutrilens.nutrilensai.model.OcrState
+import com.nutrilens.nutrilensai.model.UiState
 import com.nutrilens.nutrilensai.repository.GemmaRepository
 import com.nutrilens.nutrilensai.util.OcrHelper
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
-
-sealed class UiState {
-    object ModelNotFound : UiState()
-    object ModelLoading : UiState()
-    object Ready : UiState()
-    object Analyzing : UiState()
-    data class Streaming(val text: String) : UiState()
-    data class Result(val result: AnalysisResult) : UiState()
-    data class Error(val message: String) : UiState()
-}
-
-sealed class OcrState {
-    object Idle : OcrState()
-    object Processing : OcrState()
-    data class Success(val rawText: String) : OcrState()
-    data class Error(val message: String) : OcrState()
-}
+import timber.log.Timber
 
 class AnalysisViewModel(application: Application) : AndroidViewModel(application) {
 
@@ -37,6 +22,8 @@ class AnalysisViewModel(application: Application) : AndroidViewModel(application
 
     private val _ocrState = MutableStateFlow<OcrState>(OcrState.Idle)
     val ocrState: StateFlow<OcrState> = _ocrState
+
+    val modelFilePath: String get() = repository.modelFile().absolutePath
 
     init {
         checkAndLoadModel()
@@ -53,6 +40,7 @@ class AnalysisViewModel(application: Application) : AndroidViewModel(application
                 repository.loadModel()
                 _uiState.value = UiState.Ready
             } catch (e: Exception) {
+                Timber.e(e, "Failed to load model")
                 _uiState.value = UiState.Error("Failed to load model: ${e.message}")
             }
         }
@@ -62,9 +50,10 @@ class AnalysisViewModel(application: Application) : AndroidViewModel(application
         viewModelScope.launch {
             _ocrState.value = OcrState.Processing
             try {
-                val text = OcrHelper.extractText(uri, getApplication())
-                _ocrState.value = OcrState.Success(text)
+                val extractedText = OcrHelper.extractText(uri, getApplication())
+                _ocrState.value = OcrState.Success(extractedText)
             } catch (e: Exception) {
+                Timber.e(e, "OCR failed for uri: %s", uri)
                 _ocrState.value = OcrState.Error("OCR failed: ${e.message}")
             }
         }
@@ -75,7 +64,10 @@ class AnalysisViewModel(application: Application) : AndroidViewModel(application
     }
 
     fun analyze(ingredients: String) {
-        if (ingredients.isBlank()) return
+        if (ingredients.isBlank()) {
+            _uiState.value = UiState.Error("Please enter an ingredient list before analyzing.")
+            return
+        }
         viewModelScope.launch {
             _uiState.value = UiState.Analyzing
             val accumulated = StringBuilder()
@@ -86,6 +78,7 @@ class AnalysisViewModel(application: Application) : AndroidViewModel(application
                 }
                 _uiState.value = UiState.Result(repository.parseResponse(accumulated.toString()))
             } catch (e: Exception) {
+                Timber.e(e, "Analysis failed")
                 _uiState.value = UiState.Error("Analysis failed: ${e.message}")
             }
         }

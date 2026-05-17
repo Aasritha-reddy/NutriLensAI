@@ -1,8 +1,9 @@
 package com.nutrilens.nutrilensai.util
 
 import android.content.Context
+import com.nutrilens.nutrilensai.Constants
 
 object AssetReader {
     fun readHealthReport(context: Context): String =
-        context.assets.open("sample_health_report.txt").bufferedReader().use { it.readText() }
+        context.assets.open(Constants.HEALTH_REPORT_ASSET_NAME).bufferedReader().use { it.readText() }
 }

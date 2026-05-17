@@ -21,21 +21,21 @@ private val LightColorScheme = lightColorScheme(
     surfaceVariant      = NutriGreenLight,
     onSurfaceVariant    = NutriTextSecondary,
     outline             = NutriDivider,
-    outlineVariant      = Color(0xFFE5E7EB),
+    outlineVariant      = Color(0xFFCBD5E1),
 )
 
 private val DarkColorScheme = darkColorScheme(
     primary             = NutriGreenAccent,
-    onPrimary           = Color(0xFF003828),
+    onPrimary           = Color(0xFF1E1B4B),
     primaryContainer    = NutriGreenDark,
     onPrimaryContainer  = NutriGreenLight,
     secondary           = NutriGreen,
-    background          = Color(0xFF111827),
-    onBackground        = Color(0xFFF9FAFB),
-    surface             = Color(0xFF1F2937),
-    onSurface           = Color(0xFFF3F4F6),
-    surfaceVariant      = Color(0xFF374151),
-    onSurfaceVariant    = Color(0xFF9CA3AF),
+    background          = Color(0xFF0F172A),
+    onBackground        = Color(0xFFF1F5F9),
+    surface             = Color(0xFF1E293B),
+    onSurface           = Color(0xFFE2E8F0),
+    surfaceVariant      = Color(0xFF334155),
+    onSurfaceVariant    = Color(0xFF94A3B8),
 )
 
 @Composable

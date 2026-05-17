@@ -19,3 +19,16 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+# Preserve stack traces in crash reports
+-keepattributes SourceFile,LineNumberTable
+
+# Timber — keep the debug tree for crash reporting
+-keep class timber.log.** { *; }
+
+# LiteRT-LM native bindings
+-keep class com.google.ai.edge.litertlm.** { *; }
+
+# ML Kit text recognition
+-keep class com.google.mlkit.** { *; }
+-keep class com.google.android.gms.vision.** { *; }
